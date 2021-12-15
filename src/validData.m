@@ -72,7 +72,7 @@ function [lambda_1_opt, lambda_2_opt, ratio_z] = ValidData(checkData,...
         ylabel(['Correct Ratio']);
         set(gca, 'FontSize', 12, 'FontName', 'Times', 'LineWidth', 1.5);
         
-        filename = ['res/plots/valid/valid' , '.png'];
+        filename = ['res/plots/valid/valid' , '.pdf'];
         [path, ~] = fileparts(filename);
         if ~exist(path, 'dir')
             mkdir(path);

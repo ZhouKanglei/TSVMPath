@@ -4,8 +4,8 @@ addpath(genpath('src/'));
 
 %% Set System Parameters.
 variables();
-lambda_1_0 = 1000;
-lambda_2_0 = 1000;
+lambda_1_0 = 100;
+lambda_2_0 = 100;
 dataSetNum = 1;
 
 %% Divide Dataset into Training set and Test set.
