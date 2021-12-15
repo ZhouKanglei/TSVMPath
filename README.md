@@ -1,4 +1,4 @@
 # TSVMPath
 The implementation of Fast Regularization Parameter Tuning Algorithm for Twin Support Vector Machine.
 
-Code will be release soon!
+Code will be released soon!
