@@ -16,11 +16,11 @@ Illustration of TSVM: the red circle samples is in the set $\mathcal{A}$, marked
 
 Flowchart of the proposed fast regularization parameter tuning algorithm for TSVM (TSVMPath). It mainly consists of two steps: initialization as shown in Algorithm 1 and updating as shown in Algorithm 2, where the initialization aims to assign initial values to parameters by solving event 1 and the updating process aims to find out the entire solution path by reducing the value of the regularization parameter.
 
-![framework](figs\framework.png)
+![framework](figs/framework.png)
 
 ## Results
 
-![piecewise_linear_path](figs\piecewise_linear_path.png)
+![piecewise_linear_path](figs/piecewise_linear_path.png)
 
 ## Contact
 
