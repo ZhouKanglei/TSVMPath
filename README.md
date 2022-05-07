@@ -10,7 +10,7 @@ Twin support vector machine (TSVM) has attracted much attention in the field of 
 
 Illustration of TSVM: the red circle samples is in the set $\mathcal{A}$, marked as $+1$, the violet square samples are in the set $\mathcal{B}$, marked as $-1$, and solid lines in red and violet represent two nonparallel hyperplanes, respectively. In addition, the distance from the sample to the hyperplane is also indicated in the figure. 
 
-![TSVM](figs\TSVM.png)
+![TSVM](figs/TSVM.png)
 
 ## Framework
 
