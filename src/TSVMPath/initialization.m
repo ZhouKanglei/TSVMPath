@@ -9,7 +9,6 @@ function [alpha_1_0, w_1_0, b_1_0, lambda_1_0,...
     % QPP Initialization.
 %     if lambda_1_0 == 100 || lambda_2_0 == 100 || lambda_1_0 < 0 || lambda_2_0 < 0
 %         [alpha_1_0, w_1_0, b_1_0, lambda_1_0] = init_1_QPP(A, B, lambda_1_0);
-%         % [lambda_1_0, f_1_0, w_1_0, b_1_0, alpha_1_0] = initQPP_one(A, B);
 %         [alpha_2_0, w_2_0, b_2_0, lambda_2_0] = init_2_QPP(A, B, lambda_2_0);
 %     end
 end

@@ -1,5 +1,5 @@
 function [filename, trainA, indicesA, trainB, indicesB, testData] = getKFoldData(dataSetNum,...
-    testRatio, norm, SNR, num_noise)
+    testRatio, norm, SNR, num_noise, K)
     %% Obtain Dataset #num.
     fileFolder = fullfile('./data');
     dirOutput = dir(fullfile(fileFolder, '*.mat'));
@@ -31,9 +31,7 @@ function [filename, trainA, indicesA, trainB, indicesB, testData] = getKFoldData
         
         %% Normalization
         if norm == 1
-%             dataNorm = normalize(data);
-            dataNorm = mapminmax(data', 0, 1);
-            dataNorm = dataNorm';
+            dataNorm = normalize(data);
         else
             dataNorm = data;
         end
@@ -51,14 +49,22 @@ function [filename, trainA, indicesA, trainB, indicesB, testData] = getKFoldData
         oneData = dataNorm(one, :);
         twoData = dataNorm(two, :);
         
-        trainAIndices = crossvalind('HoldOut', size(one, 1), testRatio);
+        if testRatio == 0
+            trainAIndices = ones(size(one, 1), 1);
+        else
+            trainAIndices = crossvalind('HoldOut', size(one, 1), testRatio);
+        end
         testAIndices = ~trainAIndices;
         
-        trainBIndices = crossvalind('HoldOut', size(two, 1), testRatio);
+        if testRatio == 0
+            trainBIndices = ones(size(two, 1), 1);
+        else
+            trainBIndices = crossvalind('HoldOut', size(two, 1), testRatio);
+        end
         testBIndices = ~trainBIndices;
         
-        indicesA = crossvalind('kfold', sum(trainAIndices), 10);
-        indicesB = crossvalind('kfold', sum(trainBIndices), 10);
+        indicesA = crossvalind('kfold', sum(trainAIndices), K);
+        indicesB = crossvalind('kfold', sum(trainBIndices), K);
         
        %% Noising...
         if num_noise ~= 0
@@ -79,7 +85,7 @@ function [filename, trainA, indicesA, trainB, indicesB, testData] = getKFoldData
         testA = oneData(testAIndices, :);
         testB = twoData(testBIndices, :);
         testData = [testA ones(size(testA, 1), 1);...
-            testB ones(size(testB, 1), 1) + 1];
+            testB zeros(size(testB, 1), 1) - 1];
         
     end
 end
