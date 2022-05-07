@@ -10,17 +10,17 @@ Twin support vector machine (TSVM) has attracted much attention in the field of 
 
 Illustration of TSVM: the red circle samples is in the set $\mathcal{A}$, marked as $+1$, the violet square samples are in the set $\mathcal{B}$, marked as $-1$, and solid lines in red and violet represent two nonparallel hyperplanes, respectively. In addition, the distance from the sample to the hyperplane is also indicated in the figure. 
 
-![TSVM](E:\Documents\Word\Paper\TSVMPath\figs\TSVM.png)
+![TSVM](figs\TSVM.png)
 
 ## Framework
 
 Flowchart of the proposed fast regularization parameter tuning algorithm for TSVM (TSVMPath). It mainly consists of two steps: initialization as shown in Algorithm 1 and updating as shown in Algorithm 2, where the initialization aims to assign initial values to parameters by solving event 1 and the updating process aims to find out the entire solution path by reducing the value of the regularization parameter.
 
-![framework](E:\Documents\Word\Paper\TSVMPath\figs\framework.png)
+![framework](figs\framework.png)
 
 ## Results
 
-![piecewise_linear_path](E:\Documents\Word\Paper\TSVMPath\figs\piecewise_linear_path.png)
+![piecewise_linear_path](figs\piecewise_linear_path.png)
 
 ## Contact
 
