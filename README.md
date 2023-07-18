@@ -6,7 +6,7 @@ The implementation of Fast Regularization Parameter Tuning Algorithm for Twin Su
 
 Twin support vector machine (TSVM) has attracted much attention in the field of machine learning with good generalization ability and computational performance.　However, the conventional grid search method is very time-consuming to obtain the optimal regularization parameter. To address this problem, we develop a novel fast regularization parameter tuning algorithm for TSVM, named TSVMPath. After transforming the models of two sub-optimization problems, we divide the two classes of samples into different sets. Lagrangian multipliers are then proved to be piecewise linear concerning the corresponding regularization parameters, greatly extending the search space of the solution. By proving that the Lagrangian multipliers of two sub-optimization models are 1 when the regularization parameters approach infinity, we design a simple yet effective initialization. As a result, the entirely regularized solution path can be obtained without solving quadratic programming problems. Four types of events are finally defined to update the solution path. Experiments on 8 UCI datasets show that both the prediction accuracy of TSVMPath is superior to the best competing methods, with up to four orders of magnitude speed-up for the computational overhead compared with the grid search method.
 
-[DOI](https://doi.org/10.1007/s11063-022-10870-1) | [Paper Address](https://zhoukanglei.github.io/publication/tsvmpath/TSVMPath.pdf)
+[Paper Address](https://doi.org/10.1007/s11063-022-10870-1) | [Download Paper](https://zhoukanglei.github.io/publication/tsvmpath/TSVMPath.pdf)
 
 ## TSVM
 
